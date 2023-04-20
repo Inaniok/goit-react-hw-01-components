@@ -9,7 +9,7 @@ import {
 export const FriendListItem = ({ avatar, name, isOnline }) => {
   return (
     <FriendItem>
-      <FriendStatus status={isOnline}></FriendStatus>
+      <FriendStatus status={isOnline} />
       <FriendImg src={avatar} alt={`${name} avatar`} width="48" />
       <FriendName>{name}</FriendName>
     </FriendItem>
@@ -17,11 +17,7 @@ export const FriendListItem = ({ avatar, name, isOnline }) => {
 };
 
 FriendListItem.propTypes = {
-  friends: PropTypes.arrayOf(
-    PropTypes.shape({
-      avatar: PropTypes.string.isRequired,
-      name: PropTypes.string.isRequired,
-      isOnline: PropTypes.bool.isRequired,
-    })
-  ),
+  avatar: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  isOnline: PropTypes.bool.isRequired,
 };
