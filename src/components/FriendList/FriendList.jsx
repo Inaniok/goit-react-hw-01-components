@@ -3,7 +3,6 @@ import { FriendListItem } from './FriendListItem/FriendListItem';
 import { FriendsList } from './FriendList.styled';
 
 export const FriendList = ({ friends }) => {
-  console.log(friends);
   return (
     <FriendsList>
       {friends.map(({ avatar, name, isOnline, id }) => (
@@ -20,6 +19,11 @@ export const FriendList = ({ friends }) => {
 
 FriendList.propTypes = {
   friends: PropTypes.arrayOf(
-    PropTypes.shape({ id: PropTypes.number.isRequired })
-  ),
+    PropTypes.shape({
+      id: PropTypes.number.isRequired,
+      avatar: PropTypes.string.isRequired,
+      name: PropTypes.string.isRequired,
+      isOnline: PropTypes.bool.isRequired,
+    })
+  ).isRequired,
 };
