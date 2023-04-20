@@ -1,5 +1,4 @@
 import PropTypes from 'prop-types';
-
 import { StatisticsList } from './StatisticsList/StatisticsList';
 import { StatistSection, StatistTitle } from './Statistics.styled';
 
