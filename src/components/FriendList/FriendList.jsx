@@ -27,3 +27,5 @@ FriendList.propTypes = {
     })
   ).isRequired,
 };
+
+export default FriendList;
